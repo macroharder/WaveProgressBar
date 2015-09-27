@@ -18,6 +18,7 @@ and just call setmCurrentProgress to update the progress.
 
 ## Public methods
 
+```
 getMaxProgress() //Return the max progress.
 
 setMaxProgress(int maxProgress) //Set the max progress.
@@ -31,4 +32,5 @@ setTextColor(int textColor) //Set the text color of the progress value.
 setCircleColor(int circleColor) //Set the color of the back circle.
 
 setWaveColor(int waveColor) //Set the wave progress color.
+```
 
