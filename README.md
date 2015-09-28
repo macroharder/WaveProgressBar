@@ -37,7 +37,8 @@ setWaveColor(int waveColor) //Set the wave progress color.
 
 ## Communication
 
-[Personal blog](http://liukun.engineer/)
+[Personal blog](http://liukun.engineer/)  
+
 [Weibo](http://www.weibo.com/u/3219033010/)
 
 
