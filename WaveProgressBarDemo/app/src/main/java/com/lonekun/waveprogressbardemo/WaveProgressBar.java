@@ -61,12 +61,14 @@ public class WaveProgressBar extends View {
             if(progressBar != null){
                 switch (msg.what){
                     case MSG_INVALIDATE:
-                        progressBar.mStartX += 5;
-                        if(progressBar.mStartX > 0){
-                            progressBar.mStartX = -80;
+                        if(progressBar.mCurrentProgress < progressBar.mMaxProgress){
+                            progressBar.mStartX += 5;
+                            if(progressBar.mStartX > 0){
+                                progressBar.mStartX = -80;
+                            }
+                            progressBar.invalidate();
+                            sendEmptyMessageDelayed(MSG_INVALIDATE, 50);
                         }
-                        progressBar.invalidate();
-                        sendEmptyMessageDelayed(MSG_INVALIDATE, 50);
                         break;
                 }
             }
@@ -134,6 +136,7 @@ public class WaveProgressBar extends View {
         }
     }
 
+
     public void setTextColor(int textColor) {
         this.mTextColor = textColor;
         mTextPaint.setColor(textColor);
@@ -154,10 +157,15 @@ public class WaveProgressBar extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mWidth = getMeasuredWidth();
         mHeight = getMeasuredHeight();
-        if(mWidth <= 5 || mHeight <= 5){
-            mWidth = mHeight = 300;
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+
+        //the default size is 200px*200px
+        if(mWidth <= 5 || mHeight <= 5 || widthMode == MeasureSpec.AT_MOST || heightMode == MeasureSpec.AT_MOST){
+            mWidth = mHeight = 200;
             setMeasuredDimension(mWidth, mHeight);
         }
+
         mRadius = Math.min(mWidth, mHeight) / 2;
         mBitmap = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
         mBitmapCanvas = new Canvas(mBitmap);
