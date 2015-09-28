@@ -5,6 +5,7 @@ An Android progressbar update progress like wave
 ![WaveProgressBar](http://7xkou8.com1.z0.glb.clouddn.com/ariesLRX22Gliukun09272015110902.gif)
 	
 ## Usage
+There is just a custom view java class file named *WaveProgressBar.java*, copy it to your own progect~
 ```
 <com.lonekun.waveprogressbardemo.WaveProgressBar
 android:layout_gravity="center_horizontal"
@@ -33,4 +34,11 @@ setCircleColor(int circleColor) //Set the color of the back circle.
 
 setWaveColor(int waveColor) //Set the wave progress color.
 ```
+
+## Communication
+
+[Personal blog](http://liukun.engineer/)
+[Weibo](http://www.weibo.com/u/3219033010/)
+
+
 
