@@ -5,7 +5,7 @@ An Android progressbar update progress like wave
 ![WaveProgressBar](http://7xkou8.com1.z0.glb.clouddn.com/ariesLRX22Gliukun09272015110902.gif)
 	
 ## Usage
-There is just a custom view java class file named *WaveProgressBar.java*, copy it to your own progect~
+There is just a custom view java class file named *WaveProgressBar.java*, copy it to your own project~
 ```
 <com.lonekun.waveprogressbardemo.WaveProgressBar
 android:layout_gravity="center_horizontal"
